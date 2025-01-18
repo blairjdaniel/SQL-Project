@@ -43,8 +43,8 @@ This project involves loading, cleaning, and analyzing e-commerce data using Pos
 
 - [PostgreSQL Tutorial: Import CSV File into PostgreSQL Table](https://www.postgresqltutorial.com/postgresql-tutorial/import-csv-file-into-posgresql-table/)
 - [YouTube: Import CSV File into PostgreSQL](https://www.youtube.com/watch?v=6Jf7eTkIaR4)
--[Medium: Tutorial on QA](https://drive.google.com/file/d/16xMdqgr7OnjKYpi3KCclc9sIVXoj4kpm/view)
-- 
+- [Medium: Tutorial on QA](https://drive.google.com/file/d/16xMdqgr7OnjKYpi3KCclc9sIVXoj4kpm/view)
+
 
 ## License
 
