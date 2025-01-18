@@ -9,8 +9,8 @@ This project involves loading, cleaning, and analyzing e-commerce data using Pos
 - `schema.png`: The ERD (Entity-Relationship Diagram) for the database.
 - `cleaning_data.md`: File containing SQL scripts for cleaning the data.
 - `starting_with_questions.md`: The file for answering the project questions.
--`starting_with_data.md`: The file for answering new questions on the data.
--`qa.md`: The file to store the QA part of the project.
+- `starting_with_data.md`: The file for answering new questions on the data.
+- `qa.md`: The file to store the QA part of the project.
 
 ## Getting Started
 
