@@ -1,0 +1,34 @@
+name: postgres-example
+channels:
+  - defaults
+dependencies:
+  - postgresql=14
+  - psycopg2
+  - pip
+  - pip:
+    - pandas
+    - git+https://github.com/catherinedevlin/ipython-sql.git
+    - altair==5.4.1
+    - beautifulsoup4==4.12.3
+    - bs4==0.0.2
+    - et-xmlfile==1.1.0
+    - folium==0.17.0
+    - matplotlib==3.9.2
+    - matplotlib-inline==0.1.7
+    - meteostat==1.6.8
+    - numpy==2.1.2
+    - openpyxl==3.1.5
+    - requests==2.32.3
+    - scikit-learn==1.5.2
+    - scipy==1.14.1
+    - seaborn==0.13.2
+    - xmltodict==0.14.1
+    - lxml
+    - plotly
+    - ipywidgets
+    - seaborn
+    - scipy
+    - statsmodels
+    - streamlit
+    - transformers
+  #  - pytorch
