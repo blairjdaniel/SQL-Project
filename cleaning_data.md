@@ -2,18 +2,18 @@ What issues will you address by cleaning the data?
 
 **Loading Data**
     - I noticed right away the col names were a mix of snake & camel so
-    I formatted them all to snake but I did it manually in PgAdmin <br>
+        I formatted them all to snake but I did it manually in PgAdmin <br>
     - I then looked at what was in the col as far as data types then
     changed them accordingly<br>
     
 **Question ONE**
     1. I wanted to look at the country col and standardize any col that might use shorform like U.S or U.K.<br>
     2. I found some col had ('not set') so I changed it<br>
-    3. I created a view table that filtered out the Null or 'not set'<br><br>
-    4. Created a view from analytics to use the units sold * unit price for a relevant revenue column<br>
+    3. I created a view table that filtered out the Null or 'not set'<br>
+    4. Created a view from analytics to use the units sold * unit price for a relevant revenue column<br><br>
 **Question TWO**
     1. I wanted to see which product col from which table to use.<br>
-    2. show how many rows in each col.<br>
+    2. show how many rows in each col.<br><br>
 **Question FOUR**
     1. Start by checking for Nulls or values that seem off -- no nulls --   <  1 has 512 rows, I can take these out with a view table<br>
     2. Create a view table for ordered_quantity > 0<br>
