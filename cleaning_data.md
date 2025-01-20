@@ -2,31 +2,30 @@ What issues will you address by cleaning the data?
 
 **Loading Data**
     - I noticed right away the col names were a mix of snake & camel so
-    I formatted them all to snake but I did it manually in PgAdmin
+    I formatted them all to snake but I did it manually in PgAdmin <br>
     - I then looked at what was in the col as far as data types then
-    changed them accordingly
+    changed them accordingly<br>
     
 **Question ONE**
-    1. I wanted to look at the country col and standardize any col that might use shorform like U.S or U.K.
-    2. I found some col had ('not set') so I changed it
+    1. I wanted to look at the country col and standardize any col that might use shorform like U.S or U.K.<br>
+    2. I found some col had ('not set') so I changed it<br>
     3. I created a view table that filtered out the Null or 'not set'<br><br>
-    4. Created a view from analytics to use the units sold * unit price for a relevant revenue column
+    4. Created a view from analytics to use the units sold * unit price for a relevant revenue column<br>
 **Question TWO**
-    1. I wanted to see which product col from which table to use.
-    2. show how many rows in each col.<br><br>
-**Question THREE**<br><br>
+    1. I wanted to see which product col from which table to use.<br>
+    2. show how many rows in each col.<br>
 **Question FOUR**
-    1. Start by checking for Nulls or values that seem off -- no nulls --   <  1 has 512 rows, I can take these out with a view table
-    2. Create a view table for ordered_quantity > 0
+    1. Start by checking for Nulls or values that seem off -- no nulls --   <  1 has 512 rows, I can take these out with a view table<br>
+    2. Create a view table for ordered_quantity > 0<br>
     3. Need to get the product_price col to normal values<br><br>
 **Question FIVE**
-    1. Create a clean analytics View with non null revenues. 
-    2. Look for how many cols have a country match to revenue using 
+    1. Create a clean analytics View with non null revenues. <br>
+    2. Look for how many cols have a country match to revenue using <br>
     the analytics table<br><br>
 **New Question 1**
-    1.Check for the primary key of the analytics_2 table to join with all_sessions_filtered table.
+    1.Check for the primary key of the analytics_2 table to join with all_sessions_filtered table.<br>
     I'm going to assume the visit_id is as close to a primary key as possible and make a cte later filtering out all NULL visit_id or have duplicates
-    2.
+
     
 
 Queries:
