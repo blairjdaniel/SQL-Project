@@ -8,36 +8,31 @@ SQL Queries:
 
 ```sql
 /* 
-Take the city, country, and create a total rev col using SUM.
-Filter out the NULL transactions, total_transactions_revenue col.
+Take the city, country col from all_sessions_filtered.
+sum the actual revenue from the analytics_revenue view
+Join the all_session_filtered and view
 Group by city, country.
-I then added the analytics table to compare the results between tables
 */
 SELECT
     asf.city AS City,
     asf.country AS Country,
-    SUM(asf.total_transaction_revenue) AS "Total Revenue from All_Sessions",
-	SUM(a.revenue) AS "Total Revenue from Analytics"
+	SUM(a.actual_revenue) AS "Total Revenue from Analytics"
 FROM 
     all_sessions_filtered asf
-		JOIN analytics_2 a ON asf.visit_id = a.visit_id
-WHERE 
-    asf.transactions IS NOT NULL 
-    AND asf.total_transaction_revenue IS NOT NULL
-	AND a.revenue IS NOT NULL
+		JOIN analytics_revenue a ON asf.visit_id = a.visit_id
 GROUP BY 
     asf.city, asf.country
 ORDER BY 
-    "Total Revenue from All_Sessions" DESC, "Total Revenue from Analytics" DESC
-LIMIT 10
+	"Total Revenue from Analytics" DESC
+LIMIT 1
 ```
 
 Answer:
 The query shows that San Francisco,	United States spent	$1,564,320,000.00 which is the most.
 
-| Country         | City          | Total Revenue All_Session|Total Revenue Analytics|
-|-----------------|---------------|------------------|----------------------------------|
-| United States   | Sunnyvale     | $|   11709310000 |$672229992
+| Country         | City          | Total Revenue Analytics|
+|-----------------|---------------|------------------------|
+| United States   | New York      |$11208.00
 
 
 

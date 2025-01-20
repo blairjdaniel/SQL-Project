@@ -10,6 +10,7 @@ What issues will you address by cleaning the data?
     1. I wanted to look at the country col and standardize any col that might use shorform like U.S or U.K.
     2. I found some col had ('not set') so I changed it
     3. I created a view table that filtered out the Null or 'not set'<br><br>
+    4. Created a view from analytics to use the units sold * unit price for a relevant revenue column
 **Question TWO**
     1. I wanted to see which product col from which table to use.
     2. show how many rows in each col.<br><br>
@@ -60,6 +61,23 @@ select *
 from all_sessions
 where country != '(not set)'
 	and city not in ('(not set)', 'not available in demo dataset')
+```
+4.
+```sql
+-- the revenue col looks off so I will create a view with the actual revenue using 
+-- units sold * unit price
+CREATE OR REPLACE VIEW analytics_revenue AS
+(SELECT
+	visit_id, SUM(units_sold * unit_price) AS actual_revenue
+FROM 
+	analytics_2
+WHERE
+	units_sold IS NOT NULL
+	AND unit_price IS NOT NULL
+GROUP BY 
+	visit_id
+)
+
 ```
 
 **Question TWO**<br>
